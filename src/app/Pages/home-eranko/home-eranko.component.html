@@ -1,9 +1,8 @@
 <div id="eranko-card">
-
-  <app-eranko-card class="card-item"
+  <app-eranko-card
+    class="card-item"
     *ngFor="let animals of animal"
     [titulo]="animals"
-    (click)="chamasecao(animals)"
+    (click)="playsom(animals)"
   ></app-eranko-card>
-  
 </div>

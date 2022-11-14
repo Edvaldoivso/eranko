@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeErankoComponent } from './Pages/home-eranko/home-eranko.component';
 
 const routes: Routes = [
+  { path: '', component: HomeErankoComponent },
+
   {
     path: 'home-eranko',
     component: HomeErankoComponent,

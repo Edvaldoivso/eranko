@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AudioplayService } from 'src/app/services/audioplay.service';
 
 @Component({
   selector: 'home-eranko',
@@ -8,25 +9,25 @@ import { Component, OnInit } from '@angular/core';
 export class HomeErankoComponent implements OnInit {
   public card: Array<number> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   public animal: Array<string> = [
-    'Codorna',
-    'Papagaio',
-    'Gato',
-    'Cachorro',
-    'Tucano',
-    'Beija-Flor',
-    'Sabia',
-    'Piriquito',
-    
+    'codorna',
+    'amazona',
+    'gato',
+    'cachorro',
+    'tucano',
+    'beija-flor',
+    'sabia',
+    'piriquito',
   ];
-  constructor() {}
+  public audioinstance: any;
+
+  constructor(public audioplay: AudioplayService) {}
 
   ngOnInit(): void {}
 
-
-public chamasecao(animals : string){
-  window.alert('Chamou' + animals)
-}
-
+  public playsom(animals: string) {
+    this.audioplay.audioservice(animals);
+    setTimeout(()=>{this.audioplay.pararplay()} , 7000)
+  }
 
 
 }

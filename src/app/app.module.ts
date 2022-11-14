@@ -7,11 +7,13 @@ import { HomeErankoComponent } from './Pages/home-eranko/home-eranko.component';
 import { ErankoCardComponent } from './Pages/eranko-card/eranko-card/eranko-card.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeErankoComponent,
-    ErankoCardComponent
+    ErankoCardComponent,
+
   ],
   imports: [
     BrowserModule,
