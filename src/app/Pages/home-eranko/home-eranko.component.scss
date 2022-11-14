@@ -1,0 +1,15 @@
+#eranko-card {
+    height: 100vh;
+    background-color: rgb(5, 25, 63);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    ;
+
+
+    .card-item {
+        margin: auto;
+        height: 1%;
+    }
+}
