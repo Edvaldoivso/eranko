@@ -3,6 +3,17 @@
     class="card-item"
     *ngFor="let animals of animal"
     [titulo]="animals"
-    (click)="playsom(animals)"
+    (click)="selecionaanimal(animals)"
   ></app-eranko-card>
 </div>
+
+<div id="detalhessom">
+  <div id="imagemanimal">Imagem Animal</div>
+
+  <div id="listaplay">
+    <div>ITEM </div>
+   
+  </div> 
+</div>
+
+<app-eranko-modal></app-eranko-modal>

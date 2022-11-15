@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AudioplayService } from 'src/app/services/audioplay.service';
+import { ModalServiceService } from 'src/app/services/Modal/modal-service.service';
 
 @Component({
   selector: 'home-eranko',
@@ -20,14 +21,18 @@ export class HomeErankoComponent implements OnInit {
   ];
   public audioinstance: any;
 
-  constructor(public audioplay: AudioplayService) {}
+  constructor(
+    public audioplay: AudioplayService,
+    public openmodal: ModalServiceService
+  ) {}
 
   ngOnInit(): void {}
 
-  public playsom(animals: string) {
-    this.audioplay.audioservice(animals);
-    setTimeout(()=>{this.audioplay.pararplay()} , 7000)
+  public selecionaanimal(animals: string) {
+    //this.audioplay.audioservice(animals);
+    //this.openmodal.OpenModal();
+
+    const areadetalhe = document.getElementById('detalhessom');
+    areadetalhe!.style.display = 'block';
   }
-
-
 }
