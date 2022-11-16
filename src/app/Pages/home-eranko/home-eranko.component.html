@@ -2,18 +2,22 @@
   <app-eranko-card
     class="card-item"
     *ngFor="let animals of animal"
-    [titulo]="animals"
+    [tipoanimal]="animals"
     (click)="selecionaanimal(animals)"
   ></app-eranko-card>
 </div>
 
 <div id="detalhessom">
-  <div id="imagemanimal">Imagem Animal</div>
+  <div
+    id="imagemanimal"
+    [style.background]="
+      'url(assets/Images/animais/fundo' + animalcard + '.jpg)'
+    "
+  ></div>
 
   <div id="listaplay">
-    <div>ITEM </div>
-   
-  </div> 
+    <div id="somanimal" (click)="tocarsom(animalcard)">{{ animalcard  ? '▶️ ' + animalcard  : 'Selecione um animal' }}</div>
+  </div>
 </div>
 
 <app-eranko-modal></app-eranko-modal>

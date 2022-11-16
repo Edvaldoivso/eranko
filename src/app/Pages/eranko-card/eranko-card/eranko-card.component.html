@@ -1,5 +1,7 @@
 <div id="card">
-  <div id="imagem"></div>
+  <div id="imagem" [style.background]="
+      'url(assets/Images/animais/' + tipoanimal + '.jpg)'
+    "></div>
 
-  <div id="titulo">{{ titulo | uppercase}}</div>
+  <div id="titulo">{{ tipoanimal | uppercase}}</div>
 </div>

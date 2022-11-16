@@ -15,11 +15,11 @@ export class HomeErankoComponent implements OnInit {
     'gato',
     'cachorro',
     'tucano',
-    'beija-flor',
+    'beijaflor',
     'sabia',
     'piriquito',
   ];
-  public audioinstance: any;
+  public animalcard: any;
 
   constructor(
     public audioplay: AudioplayService,
@@ -29,10 +29,13 @@ export class HomeErankoComponent implements OnInit {
   ngOnInit(): void {}
 
   public selecionaanimal(animals: string) {
-    //this.audioplay.audioservice(animals);
-    //this.openmodal.OpenModal();
 
-    const areadetalhe = document.getElementById('detalhessom');
-    areadetalhe!.style.display = 'block';
+    this.animalcard = animals
+
+  }
+
+  public tocarsom(animals : any){
+    this.audioplay.audioservice(animals);
+    this.openmodal.OpenModal();
   }
 }

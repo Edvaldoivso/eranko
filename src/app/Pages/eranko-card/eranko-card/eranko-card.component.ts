@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./eranko-card.component.scss'],
 })
 export class ErankoCardComponent implements OnInit {
-  @Input() public titulo: string = 'Animal ?';
+  @Input() public tipoanimal: string = 'Animal ?';
 
   constructor() {}
 
