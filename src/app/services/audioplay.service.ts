@@ -8,13 +8,14 @@ export class AudioplayService {
   constructor() {}
 
   public audioservice(url: string) {
-    this.instanciaaudio = new Audio('./Sounds/' + url + '.mp3');
+    this.instanciaaudio = new Audio('assets/Sounds/' + url + '.mp3');
 
     (() => {
       this.instanciaaudio.play();
     })();
   }
+
+  public pararaudio() {
+    this.instanciaaudio.pause();
+  }
 }
-
-
-
