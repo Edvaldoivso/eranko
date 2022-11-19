@@ -26,15 +26,16 @@ export class HomeErankoComponent implements OnInit {
     public openmodal: ModalServiceService
   ) {}
 
-  ngOnInit(): void {}
-
-  public selecionaanimal(animals: string) {
-
-    this.animalcard = animals
-
+  ngOnInit(): void {
+    this.selecionaanimal('iconanimal')
   }
 
-  public tocarsom(animals : any){
+  public selecionaanimal(animals: string) {
+    this.animalcard = this.animalcard ? animals : 'iconanimal' ;
+    
+  }
+
+  public tocarsom(animals: any) {
     this.audioplay.audioservice(animals);
     this.openmodal.OpenModal();
   }
